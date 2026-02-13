@@ -23,6 +23,7 @@ export default function Home() {
           </Link>
           <div className="flex items-center gap-8">
             <Link href="/blog" className="text-xs font-black uppercase tracking-widest hover:text-gray-500 transition-colors">Guides</Link>
+            <Link href="/blog?category=articles" className="text-xs font-black uppercase tracking-widest hover:text-gray-500 transition-colors">Articles</Link>
             <Link href="/blog" className="text-xs font-black uppercase tracking-widest hover:text-gray-500 transition-colors">Tools</Link>
             <Link href="/blog" className="nb-button nb-button-primary !py-2 !px-4 text-[10px]">Start Now</Link>
           </div>

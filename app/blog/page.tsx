@@ -8,19 +8,37 @@ export const metadata = {
   description: 'Discover proven ways to make money using AI tools. Tutorials, guides, and reviews of the best AI tools for side hustles and freelancing.',
 };
 
-export default function BlogPage() {
-  const posts = getAllPosts();
+export default async function BlogPage({ searchParams }: { searchParams: Promise<{ category?: string }> }) {
+  const { category } = await searchParams;
+  const allPosts = getAllPosts();
+  const posts = category
+    ? allPosts.filter(post => post.category.toLowerCase() === category.toLowerCase())
+    : allPosts;
+
+  const categoryTitle = category
+    ? category.charAt(0).toUpperCase() + category.slice(1)
+    : 'The Knowledge Base';
 
   return (
     <div className="max-w-7xl mx-auto px-6 py-32 font-sans">
       <div className="mb-20">
-        <span className="text-[10px] font-black uppercase tracking-[0.3em] text-gray-400 mb-4 block">Archive</span>
+        <span className="text-[10px] font-black uppercase tracking-[0.3em] text-gray-400 mb-4 block">
+          {category ? category : 'Archive'}
+        </span>
         <h1 className="text-6xl md:text-8xl font-black uppercase tracking-tighter italic mb-8">
-          THE KNOWLEDGE BASE
+          {category ? categoryTitle : 'THE KNOWLEDGE BASE'}
         </h1>
         <p className="text-xl text-gray-600 font-bold uppercase tracking-wide max-w-2xl leading-tight">
-          Every method, every tool, and every case study we've ever published. No gatekeeping.
+          {category
+            ? `All ${category} articles and guides.`
+            : 'Every method, every tool, and every case study we\'ve ever published. No gatekeeping.'
+          }
         </p>
+        {category && (
+          <Link href="/blog" className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest mt-6 hover:translate-x-1 transition-transform">
+            ← BACK TO ALL POSTS
+          </Link>
+        )}
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">

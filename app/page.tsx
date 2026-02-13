@@ -151,19 +151,24 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {['Tools', 'Tutorials', 'Reviews', 'Case Studies'].map((category) => (
-              <div key={category} className="group relative">
+            {[
+              { name: 'Tools', link: '/tools' },
+              { name: 'Tutorials', link: '/blog?category=tutorials' },
+              { name: 'Reviews', link: '/blog?category=reviews' },
+              { name: 'Case Studies', link: '/blog?category=case%20studies' }
+            ].map((category, index) => (
+              <Link key={category.name} href={category.link} className="group relative">
                 <div className="nb-card bg-gray-900 border-white text-white p-10 h-full group-hover:-translate-x-1 group-hover:-translate-y-1 transition-all">
-                  <span className="text-xs font-black uppercase tracking-[0.3em] text-gray-500 mb-6 block">0{['Tools', 'Tutorials', 'Reviews', 'Case Studies'].indexOf(category) + 1}</span>
-                  <h3 className="text-3xl font-black uppercase tracking-tighter italic mb-4">{category}</h3>
+                  <span className="text-xs font-black uppercase tracking-[0.3em] text-gray-500 mb-6 block">0{index + 1}</span>
+                  <h3 className="text-3xl font-black uppercase tracking-tighter italic mb-4">{category.name}</h3>
                   <p className="text-gray-400 text-xs font-bold leading-relaxed mb-8 uppercase tracking-widest">
-                    Expert insights on the latest {category.toLowerCase()}
+                    Expert insights on the latest {category.name.toLowerCase()}
                   </p>
-                  <Link href="/blog" className="text-[10px] font-black uppercase tracking-widest border-b border-white/20 pb-1 group-hover:border-white transition-all">
+                  <span className="text-[10px] font-black uppercase tracking-widest border-b border-white/20 pb-1 group-hover:border-white transition-all">
                     Explore Now
-                  </Link>
+                  </span>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

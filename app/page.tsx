@@ -127,7 +127,7 @@ export default function Home() {
 
         <div className="max-w-4xl mx-auto mt-20">
           <div className="nb-card p-4 bg-gray-100 border-dashed border-gray-300">
-            <AdSense slot="9876543210" className="min-h-[100px]" />
+            <AdSense slot="197802428" className="min-h-[100px]" />
           </div>
         </div>
 

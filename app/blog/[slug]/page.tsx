@@ -14,9 +14,38 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const post = getPostBySlug(slug);
+  const url = `https://ai-side-hustles.vercel.app/blog/${slug}`;
+  const ogImage = post.image || '/images/og-image.jpg';
+
   return {
-    title: `${post.title} - AI Side Hustles`,
+    title: post.title,
     description: post.description,
+    alternates: {
+      canonical: url
+    },
+    openGraph: {
+      type: 'article',
+      url,
+      title: post.title,
+      description: post.description,
+      publishedTime: post.date,
+      authors: ['Aakash'],
+      images: [
+        {
+          url: ogImage,
+          width: 1200,
+          height: 630,
+          alt: post.title
+        }
+      ]
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.description,
+      creator: '@Cryptobullaaa',
+      images: [ogImage]
+    }
   };
 }
 
@@ -24,8 +53,42 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const post = getPostBySlug(slug);
 
+  // JSON-LD structured data for SEO
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: post.title,
+    description: post.description,
+    image: post.image || 'https://ai-side-hustles.vercel.app/images/og-image.jpg',
+    datePublished: post.date,
+    dateModified: post.date,
+    author: {
+      '@type': 'Person',
+      name: 'Aakash',
+      url: 'https://cryptobulla.vercel.app'
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'AI Side Hustles',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://ai-side-hustles.vercel.app/images/logo.png'
+      }
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `https://ai-side-hustles.vercel.app/blog/${slug}`
+    }
+  };
+
   return (
     <div className="pb-32 selection:bg-black selection:text-white">
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       {/* Header */}
       <div className="bg-white border-b-4 border-black pt-32 pb-24">
         <div className="max-w-4xl mx-auto px-6">
@@ -94,7 +157,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
 
           <div className="nb-card p-10">
             <h3 className="text-xl font-black uppercase italic tracking-tighter mb-6">SPONSORED</h3>
-            <AdSense slot="1234567890" />
+            <AdSense slot="197802428" />
           </div>
 
           <div className="nb-card p-10">

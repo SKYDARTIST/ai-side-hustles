@@ -11,15 +11,53 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "AI Side Hustles - Make Money with AI Tools in 2026",
+  metadataBase: new URL('https://ai-side-hustles.vercel.app'),
+  title: {
+    default: "AI Side Hustles - Make Money with AI Tools in 2026",
+    template: "%s | AI Side Hustles"
+  },
   description: "Discover proven ways to make money using AI tools. Honest reviews, tutorials, and guides for side hustles with ChatGPT, Claude, and more.",
-  keywords: ["AI side hustles", "make money with AI", "ChatGPT", "Claude", "AI tools", "freelancing"],
-  authors: [{ name: "AI Side Hustles" }],
+  keywords: ["AI side hustles", "make money with AI", "ChatGPT", "Claude", "AI tools", "freelancing", "AI passive income", "AI business ideas"],
+  authors: [{ name: "Aakash", url: "https://cryptobulla.vercel.app" }],
+  creator: "Aakash (Cryptobulla)",
+  publisher: "AI Side Hustles",
+  alternates: {
+    canonical: "https://ai-side-hustles.vercel.app"
+  },
   openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://ai-side-hustles.vercel.app",
+    siteName: "AI Side Hustles",
     title: "AI Side Hustles - Make Money with AI Tools",
     description: "Proven ways to make money with AI. No BS, just results.",
-    type: "website",
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "AI Side Hustles - Make Money with AI Tools"
+      }
+    ]
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI Side Hustles - Make Money with AI Tools",
+    description: "Proven ways to make money with AI. No BS, just results.",
+    creator: "@Cryptobullaaa",
+    images: ["/images/og-image.jpg"]
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    }
+  }
 };
 
 export default function RootLayout({
@@ -77,8 +115,8 @@ export default function RootLayout({
                 <ul className="space-y-4">
                   <li><Link href="/blog" className="text-xs font-black uppercase tracking-widest hover:line-through transition-all">All Guides</Link></li>
                   <li><Link href="/tools" className="text-xs font-black uppercase tracking-widest hover:line-through transition-all">Prompt Library</Link></li>
-                  <li><Link href="/about" className="text-xs font-black uppercase tracking-widest hover:line-through transition-all">About Us</Link></li>
-                  <li><Link href="/contact" className="text-xs font-black uppercase tracking-widest hover:line-through transition-all">Contact</Link></li>
+                  <li><Link href="/privacy" className="text-xs font-black uppercase tracking-widest hover:line-through transition-all">Privacy Policy</Link></li>
+                  <li><Link href="/" className="text-xs font-black uppercase tracking-widest hover:line-through transition-all">Terms of Service</Link></li>
                 </ul>
               </div>
 

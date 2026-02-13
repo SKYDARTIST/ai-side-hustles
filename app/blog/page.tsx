@@ -6,6 +6,23 @@ import { format } from 'date-fns';
 export const metadata = {
   title: 'AI Side Hustle Blog - Learn How to Make Money with AI',
   description: 'Discover proven ways to make money using AI tools. Tutorials, guides, and reviews of the best AI tools for side hustles and freelancing.',
+  alternates: {
+    canonical: 'https://ai-side-hustles.vercel.app/blog'
+  },
+  openGraph: {
+    type: 'website',
+    url: 'https://ai-side-hustles.vercel.app/blog',
+    title: 'AI Side Hustle Blog - Learn How to Make Money with AI',
+    description: 'Discover proven ways to make money using AI tools. Tutorials, guides, and reviews of the best AI tools for side hustles and freelancing.',
+    images: ['/images/og-image.jpg']
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'AI Side Hustle Blog - Learn How to Make Money with AI',
+    description: 'Discover proven ways to make money using AI tools. Tutorials, guides, and reviews.',
+    creator: '@Cryptobullaaa',
+    images: ['/images/og-image.jpg']
+  }
 };
 
 export default async function BlogPage({ searchParams }: { searchParams: Promise<{ category?: string }> }) {

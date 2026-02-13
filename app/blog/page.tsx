@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { getAllPosts } from '@/lib/posts';
 import { format } from 'date-fns';
 
@@ -31,10 +32,22 @@ export default function BlogPage() {
           >
             <div className="nb-card h-full flex flex-col group-hover:-translate-x-1 group-hover:-translate-y-1 transition-all">
               <div className="aspect-video bg-gray-100 relative overflow-hidden border-b-2 border-black grayscale group-hover:grayscale-0 transition-all duration-300">
-                <div className="absolute inset-0 bg-gradient-to-tr from-gray-200 to-gray-100 opacity-50" />
-                <div className="absolute inset-0 flex items-center justify-center text-7xl font-black text-white/40 uppercase">
-                  {post.category[0]}
-                </div>
+                {post.image ? (
+                  <Image
+                    src={post.image}
+                    alt={post.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
+                ) : (
+                  <>
+                    <div className="absolute inset-0 bg-gradient-to-tr from-gray-200 to-gray-100 opacity-50" />
+                    <div className="absolute inset-0 flex items-center justify-center text-7xl font-black text-white/40 uppercase">
+                      {post.category[0]}
+                    </div>
+                  </>
+                )}
               </div>
               <div className="p-8 flex-grow flex flex-col">
                 <div className="flex items-center gap-3 mb-4">

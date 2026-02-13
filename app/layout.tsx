@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import GoogleAdSense from "@/components/GoogleAdSense";
 import Link from "next/link";
 
 const inter = Inter({
@@ -30,6 +31,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <head>
         <GoogleAnalytics />
+        <GoogleAdSense />
       </head>
       <body className={`${inter.className} antialiased selection:bg-black selection:text-white bg-gray-50 text-black`}>
         {/* Navigation */}

@@ -117,7 +117,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           <h2 className="text-4xl font-black uppercase italic tracking-tighter mb-8">SHARE THE KNOWLEDGE</h2>
           <div className="flex justify-center gap-6">
             <a
-              href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(`https://aisidehustles.com/blog/${slug}`)}`}
+              href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(`https://ai-side-hustles.vercel.app/blog/${slug}`)}`}
               target="_blank"
               rel="noopener noreferrer"
               className="nb-button nb-button-secondary text-[10px]"
@@ -125,7 +125,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
               TWITTER
             </a>
             <a
-              href={`https://reddit.com/submit?url=${encodeURIComponent(`https://aisidehustles.com/blog/${slug}`)}&title=${encodeURIComponent(post.title)}`}
+              href={`https://reddit.com/submit?url=${encodeURIComponent(`https://ai-side-hustles.vercel.app/blog/${slug}`)}&title=${encodeURIComponent(post.title)}`}
               target="_blank"
               rel="noopener noreferrer"
               className="nb-button nb-button-secondary text-[10px]"
@@ -133,7 +133,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
               REDDIT
             </a>
             <a
-              href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(`https://aisidehustles.com/blog/${slug}`)}`}
+              href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(`https://ai-side-hustles.vercel.app/blog/${slug}`)}`}
               target="_blank"
               rel="noopener noreferrer"
               className="nb-button nb-button-secondary text-[10px]"

@@ -31,7 +31,7 @@ export default function PrivacyPage() {
                             1. INTRODUCTION
                         </h2>
                         <p className="text-gray-700 leading-relaxed mb-4">
-                            AI Side Hustles ("we," "our," or "us") operates the website aisidehustles.com. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website.
+                            AI Side Hustles ("we," "our," or "us") operates the website ai-side-hustles.vercel.app. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website.
                         </p>
                         <p className="text-gray-700 leading-relaxed">
                             By using our website, you consent to the data practices described in this policy. If you do not agree with the terms of this Privacy Policy, please do not access the site.
@@ -193,7 +193,7 @@ export default function PrivacyPage() {
                                 <a href="mailto:cryptobulla369@gmail.com" className="text-black underline font-bold">cryptobulla369@gmail.com</a>
                             </p>
                             <p className="font-bold text-gray-900 mb-2">Website:</p>
-                            <p className="text-gray-700">aisidehustles.com</p>
+                            <p className="text-gray-700">ai-side-hustles.vercel.app</p>
                         </div>
                     </section>
                 </div>

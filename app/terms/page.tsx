@@ -31,7 +31,7 @@ export default function TermsPage() {
                             1. ACCEPTANCE OF TERMS
                         </h2>
                         <p className="text-gray-700 leading-relaxed mb-4">
-                            Welcome to AI Side Hustles. By accessing or using our website at aisidehustles.com (the "Website"), you agree to be bound by these Terms and Conditions ("Terms"). If you do not agree to these Terms, please do not use our Website.
+                            Welcome to AI Side Hustles. By accessing or using our website at ai-side-hustles.vercel.app (the "Website"), you agree to be bound by these Terms and Conditions ("Terms"). If you do not agree to these Terms, please do not use our Website.
                         </p>
                         <p className="text-gray-700 leading-relaxed">
                             We reserve the right to modify these Terms at any time. Changes will be effective immediately upon posting to the Website. Your continued use of the Website following any changes indicates your acceptance of the new Terms.
@@ -207,7 +207,7 @@ export default function TermsPage() {
                                 <a href="mailto:cryptobulla369@gmail.com" className="text-black underline font-bold">cryptobulla369@gmail.com</a>
                             </p>
                             <p className="font-bold text-gray-900 mb-2">Website:</p>
-                            <p className="text-gray-700">aisidehustles.com</p>
+                            <p className="text-gray-700">ai-side-hustles.vercel.app</p>
                         </div>
                     </section>
                 </div>

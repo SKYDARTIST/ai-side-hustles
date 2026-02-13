@@ -69,16 +69,18 @@ export default function RootLayout({
                 <h4 className="text-[10px] font-black uppercase tracking-[0.3em] mb-6 text-gray-400">Directory</h4>
                 <ul className="space-y-4">
                   <li><Link href="/blog" className="text-xs font-black uppercase tracking-widest hover:line-through transition-all">All Guides</Link></li>
-                  <li><Link href="/" className="text-xs font-black uppercase tracking-widest hover:line-through transition-all">Case Studies</Link></li>
-                  <li><Link href="/tools" className="text-xs font-black uppercase tracking-widest hover:line-through transition-all">Tools Review</Link></li>
+                  <li><Link href="/tools" className="text-xs font-black uppercase tracking-widest hover:line-through transition-all">Prompt Library</Link></li>
+                  <li><Link href="/about" className="text-xs font-black uppercase tracking-widest hover:line-through transition-all">About Us</Link></li>
+                  <li><Link href="/contact" className="text-xs font-black uppercase tracking-widest hover:line-through transition-all">Contact</Link></li>
                 </ul>
               </div>
 
               <div>
-                <h4 className="text-[10px] font-black uppercase tracking-[0.3em] mb-6 text-gray-400">Social</h4>
+                <h4 className="text-[10px] font-black uppercase tracking-[0.3em] mb-6 text-gray-400">Connect</h4>
                 <ul className="space-y-4">
                   <li><Link href="https://x.com/Cryptobullaaa" target="_blank" className="text-xs font-black uppercase tracking-widest hover:line-through transition-all">Twitter / X</Link></li>
-                  <li><Link href="mailto:cryptobulla369@gmail.com" className="text-xs font-black uppercase tracking-widest hover:line-through transition-all">Gmail</Link></li>
+                  <li><Link href="https://cryptobulla.vercel.app/" target="_blank" className="text-xs font-black uppercase tracking-widest hover:line-through transition-all">Portfolio</Link></li>
+                  <li><Link href="mailto:cryptobulla369@gmail.com" className="text-xs font-black uppercase tracking-widest hover:line-through transition-all">Email</Link></li>
                 </ul>
               </div>
             </div>

@@ -1,36 +1,107 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI Side Hustles - Blog Site
 
-## Getting Started
+A Next.js 15 blog about making money with AI tools. Built with TypeScript, Tailwind CSS, and MDX.
 
-First, run the development server:
+## 🚀 Quick Start
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📝 Adding Blog Posts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Create `.mdx` files in `content/posts/`:
 
-## Learn More
+```mdx
+---
+title: "Your Post Title"
+description: "SEO description"
+date: "2026-02-13"
+category: "Tools"
+---
 
-To learn more about Next.js, take a look at the following resources:
+Your content here...
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📊 Setup Analytics & AdSense
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Copy `.env.example` to `.env.local`
+2. Add your IDs:
 
-## Deploy on Vercel
+```env
+NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
+NEXT_PUBLIC_ADSENSE_ID=ca-pub-XXXXXXXXXXXXXXXX
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Get these from:
+- [Google Analytics](https://analytics.google.com)
+- [Google AdSense](https://adsense.google.com)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🚀 Deploy to Vercel
+
+1. Push to GitHub
+2. Import to [Vercel](https://vercel.com)
+3. Add environment variables
+4. Deploy
+
+## 📁 Structure
+
+```
+app/
+  page.tsx              # Homepage
+  blog/
+    page.tsx            # Blog listing
+    [slug]/page.tsx     # Blog post
+content/posts/          # Blog posts (.mdx)
+components/             # React components
+```
+
+## 🎯 Current Content
+
+Includes 15 starter posts:
+- Best AI Tools for Freelancers
+- ChatGPT vs Claude
+- 10 Ways to Make Money with ChatGPT
+- And 12 more...
+
+**Edit these posts** to add your personal experience.
+
+## 💰 Monetization
+
+### AdSense Placement
+- Top of article
+- Middle of content
+- End of article
+
+### Traffic Goals
+- 10K visits/month = $50-150
+- 50K visits/month = $500-1,500
+- 100K visits/month = $1,000-3,000
+
+## 📈 SEO Tips
+
+- Post 2-4 articles/week
+- Target long-tail keywords
+- Update old posts every 3-6 months
+- Submit sitemap to Google Search Console
+
+## 🛠️ Tech Stack
+
+- Next.js 15
+- TypeScript
+- Tailwind CSS v4
+- MDX
+- Vercel
+
+## Next Steps
+
+1. ✅ Site is built
+2. Edit blog posts (add personal examples)
+3. Add your analytics IDs
+4. Deploy to Vercel
+5. Start promoting
+
+**Good luck!** 🚀

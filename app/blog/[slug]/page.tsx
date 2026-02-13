@@ -2,6 +2,7 @@ import { MDXRemote } from 'next-mdx-remote/rsc';
 import { getPostBySlug, getAllSlugs } from '@/lib/posts';
 import { format } from 'date-fns';
 import Link from 'next/link';
+import AdSense from '@/components/AdSense';
 
 export async function generateStaticParams() {
   const slugs = getAllSlugs();
@@ -89,6 +90,11 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             <Link href="/blog" className="nb-button nb-button-secondary w-full text-center">
               GET STARTED NOW
             </Link>
+          </div>
+
+          <div className="nb-card p-10">
+            <h3 className="text-xl font-black uppercase italic tracking-tighter mb-6">SPONSORED</h3>
+            <AdSense slot="1234567890" />
           </div>
 
           <div className="nb-card p-10">

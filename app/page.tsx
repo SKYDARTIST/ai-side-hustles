@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { getAllPosts } from '@/lib/posts';
+import AdSense from '@/components/AdSense';
 
 export const metadata = {
   title: 'AI Side Hustles - Make Money with AI Tools in 2026',
@@ -121,6 +122,12 @@ export default function Home() {
               </div>
             </Link>
           ))}
+        </div>
+
+        <div className="max-w-4xl mx-auto mt-20">
+          <div className="nb-card p-4 bg-gray-100 border-dashed border-gray-300">
+            <AdSense slot="9876543210" className="min-h-[100px]" />
+          </div>
         </div>
 
         <div className="text-center mt-20">

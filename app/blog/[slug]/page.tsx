@@ -116,11 +116,30 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         <div className="inline-block py-16 px-12 border-x-4 border-black">
           <h2 className="text-4xl font-black uppercase italic tracking-tighter mb-8">SHARE THE KNOWLEDGE</h2>
           <div className="flex justify-center gap-6">
-            {['Twitter', 'Reddit', 'LinkedIn'].map((social) => (
-              <button key={social} className="nb-button nb-button-secondary text-[10px]">
-                {social}
-              </button>
-            ))}
+            <a
+              href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(`https://aisidehustles.com/blog/${slug}`)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="nb-button nb-button-secondary text-[10px]"
+            >
+              TWITTER
+            </a>
+            <a
+              href={`https://reddit.com/submit?url=${encodeURIComponent(`https://aisidehustles.com/blog/${slug}`)}&title=${encodeURIComponent(post.title)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="nb-button nb-button-secondary text-[10px]"
+            >
+              REDDIT
+            </a>
+            <a
+              href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(`https://aisidehustles.com/blog/${slug}`)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="nb-button nb-button-secondary text-[10px]"
+            >
+              LINKEDIN
+            </a>
           </div>
         </div>
       </div>

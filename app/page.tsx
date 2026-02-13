@@ -74,11 +74,12 @@ export default function Home() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {recentPosts.map((post) => (
+          {recentPosts.map((post, index) => (
             <Link
               key={post.slug}
               href={`/blog/${post.slug}`}
-              className="group flex flex-col h-full"
+              className="group flex flex-col h-full animate-fade-in-up"
+              style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="nb-card-heavy h-full flex flex-col group-hover:-translate-x-1 group-hover:-translate-y-1">
                 <div className="aspect-[16/9] bg-gray-100 relative overflow-hidden border-b-2 border-black grayscale group-hover:grayscale-0 transition-all duration-500">

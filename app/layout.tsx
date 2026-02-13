@@ -42,7 +42,7 @@ export default function RootLayout({
             </Link>
             <div className="flex items-center gap-8">
               <Link href="/blog" className="text-[10px] font-black uppercase tracking-widest hover:text-gray-500 transition-colors">Guides</Link>
-              <Link href="/blog" className="text-[10px] font-black uppercase tracking-widest hover:text-gray-500 transition-colors hidden md:block">Tools</Link>
+              <Link href="/tools" className="text-[10px] font-black uppercase tracking-widest hover:text-gray-500 transition-colors hidden md:block">Tools</Link>
               <Link href="/blog" className="nb-button nb-button-primary !py-2 !px-4 text-[10px]">Start Now</Link>
             </div>
           </div>
@@ -70,7 +70,7 @@ export default function RootLayout({
                 <ul className="space-y-4">
                   <li><Link href="/blog" className="text-xs font-black uppercase tracking-widest hover:line-through transition-all">All Guides</Link></li>
                   <li><Link href="/" className="text-xs font-black uppercase tracking-widest hover:line-through transition-all">Case Studies</Link></li>
-                  <li><Link href="/" className="text-xs font-black uppercase tracking-widest hover:line-through transition-all">Tools Review</Link></li>
+                  <li><Link href="/tools" className="text-xs font-black uppercase tracking-widest hover:line-through transition-all">Tools Review</Link></li>
                 </ul>
               </div>
 
@@ -88,8 +88,9 @@ export default function RootLayout({
                 PRODUCED BY CRYPTOBULLA LABS © 2026 • BUILT BY AAKASH • AI ENGINE: GEMINI 2.0
               </div>
               <div className="flex gap-8">
-                <Link href="#" className="text-[10px] font-black uppercase tracking-widest text-gray-400 hover:text-black hover:line-through">Privacy</Link>
-                <Link href="#" className="text-[10px] font-black uppercase tracking-widest text-gray-400 hover:text-black hover:line-through">Terms</Link>
+                <Link href="/privacy" className="text-[10px] font-black uppercase tracking-widest text-gray-400 hover:text-black hover:line-through">Privacy</Link>
+                <Link href="/terms" className="text-[10px] font-black uppercase tracking-widest text-gray-400 hover:text-black hover:line-through">Terms</Link>
+                <Link href="/ai-disclosure" className="text-[10px] font-black uppercase tracking-widest text-gray-400 hover:text-black hover:line-through">AI Disclosure</Link>
               </div>
             </div>
           </div>

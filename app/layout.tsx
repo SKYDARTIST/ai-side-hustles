@@ -67,16 +67,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <head>
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9599392402518869"
-          crossOrigin="anonymous"
-        />
+      <body className={`${inter.className} antialiased selection:bg-black selection:text-white bg-gray-50 text-black`}>
         <GoogleAnalytics />
         <GoogleAdSense />
-      </head>
-      <body className={`${inter.className} antialiased selection:bg-black selection:text-white bg-gray-50 text-black`}>
         {/* Navigation */}
         <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b-2 border-black h-16 flex items-center px-6">
           <div className="max-w-7xl mx-auto w-full flex justify-between items-center">

@@ -1,20 +1,33 @@
 # AI Side Hustles
 
-A blog about making money with AI tools — guides, reviews, and analysis.
+> Guides, reviews, and analysis on making money with AI tools.
 
-**[Live Site →](https://ai-side-hustles.vercel.app)**
+[![Live Site](https://img.shields.io/badge/Live%20Site-ai--side--hustles.vercel.app-black?style=for-the-badge&logo=vercel)](https://ai-side-hustles.vercel.app)
+
+---
+
+## Overview
+
+A content-driven blog covering practical strategies for generating income with AI — freelancing, automation, tool reviews, and industry analysis.
+
+**Categories:** Guides · Tutorials · Reviews · Articles
 
 ---
 
 ## Tech Stack
 
-- Next.js 15 + TypeScript
-- Tailwind CSS v4
-- MDX (blog posts)
-- Google Analytics + AdSense
-- Vercel
+| Layer | Technology |
+|---|---|
+| Framework | Next.js 15 + TypeScript |
+| Styling | Tailwind CSS v4 |
+| Content | MDX |
+| Analytics | Google Analytics 4 |
+| Monetization | Google AdSense |
+| Deployment | Vercel |
 
-## Run Locally
+---
+
+## Getting Started
 
 ```bash
 npm install
@@ -23,42 +36,51 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000)
 
-## Adding Posts
-
-Create `.mdx` files in `content/posts/`:
-
-```mdx
----
-title: "Your Post Title"
-description: "SEO description"
-date: "2026-02-13"
-category: "Tools"
----
-
-Your content here...
-```
-
-## Environment Variables
+### Environment Variables
 
 ```bash
 cp .env.example .env.local
 ```
 
-```env
-NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
-NEXT_PUBLIC_ADSENSE_ID=ca-pub-XXXXXXXXXXXXXXXX
+| Variable | Description |
+|---|---|
+| `NEXT_PUBLIC_GA_ID` | Google Analytics measurement ID |
+| `NEXT_PUBLIC_ADSENSE_ID` | Google AdSense publisher ID |
+
+---
+
+## Writing Posts
+
+Add `.mdx` files to `content/posts/`:
+
+```mdx
+---
+title: "Post Title"
+description: "SEO meta description (under 160 chars)"
+date: "2026-01-01"
+category: "Tools"
+---
+
+Content here...
 ```
+
+**Available categories:** `Tools` · `Guides` · `Tutorials` · `Reviews` · `Articles`
+
+---
 
 ## Project Structure
 
 ```
-app/
-  page.tsx              # Homepage
-  blog/
-    page.tsx            # Blog listing
-    [slug]/page.tsx     # Blog post
-content/posts/          # MDX blog posts
-components/             # React components
+├── app/
+│   ├── page.tsx              # Homepage
+│   ├── blog/
+│   │   ├── page.tsx          # Blog listing with category filter
+│   │   └── [slug]/page.tsx   # Individual post
+│   └── sitemap.ts            # Dynamic sitemap
+├── content/
+│   └── posts/                # MDX blog posts
+├── components/               # Shared React components
+└── public/                   # Static assets
 ```
 
 ---

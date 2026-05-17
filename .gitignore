@@ -40,3 +40,38 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 .env*.local
+
+# AI tooling config
+CLAUDE.md
+AGENTS.md
+.claude/
+
+# Draft content — local only
+content/drafts/
+
+# Local scripts
+copy-jio.js
+*.sh
+
+# Dev verification screenshots (timestamp-named)
+public/images/media__*.png
+public/images/blog_list*.png
+public/images/blog_page*.png
+public/images/blog_post_ui*.png
+public/images/blog_post_content*.png
+public/images/blog_post_page*.png
+public/images/blog_post_pro*.png
+public/images/cards_section*.png
+public/images/carousel*.png
+public/images/clean_blog*.png
+public/images/guides_grid*.png
+public/images/hero_section*.png
+public/images/home_page*.png
+public/images/homepage_current*.png
+public/images/landing_page*.png
+public/images/middle_section*.png
+public/images/tech_stack*.png
+
+# AI tool artifacts
+graphify-out/
+.codex-pet-runs/
